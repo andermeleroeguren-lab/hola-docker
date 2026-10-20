@@ -6,6 +6,7 @@ DOCKER_IMAGE="hola-docker-image"
 CONTAINER_NAME="hola-docker-container"
 JAR_PATH="target/hola-docker-0.0.1-SNAPSHOT.jar"
 
+# Verifica que Java, Docker y Maven/Maven Wrapper estén disponibles
 verificar_prerrequisitos() {
     echo ""
     echo "======================================"
@@ -32,6 +33,7 @@ verificar_prerrequisitos() {
     echo ""
 }
 
+# Compila la aplicación y genera el archivo JAR ejecutable
 compilar_aplicacion() {
     echo ""
     echo "======================================"
@@ -52,6 +54,7 @@ compilar_aplicacion() {
     echo ""
 }
 
+# Construye la imagen Docker a partir del Dockerfile
 construir_imagen() {
     echo ""
     echo "======================================"
@@ -78,6 +81,7 @@ construir_imagen() {
     echo ""
 }
 
+# Ejecuta el contenedor y gestiona uno existente con el mismo nombre
 ejecutar_contenedor() {
     echo ""
     echo "======================================"
@@ -130,6 +134,7 @@ ejecutar_contenedor() {
     echo ""
 }
 
+# Muestra el estado del JAR, la imagen Docker y el contenedor
 mostrar_estado() {
     echo ""
     echo "======================================"
@@ -180,6 +185,7 @@ Creada: {{.CreatedSince}}"
     echo ""
 }
 
+# Menú principal: se repite hasta que el usuario elige salir
 while true
 do
     echo ""
